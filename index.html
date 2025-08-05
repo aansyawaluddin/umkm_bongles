@@ -32,15 +32,22 @@
 
 <body class="font-sans bg-white">
   <!-- Header -->
-  <header class="flex justify-between items-center p-6 bg-[#fff9e3]">
-    <img src="/images/logo.png" alt="Logo Bongles" class="h-10" />
-    <nav class="space-x-6">
-      <a href="#home" class="text-sm text-gray-800 hover:underline">Home</a>
-      <a href="#produk" class="text-sm text-gray-800 hover:underline">Products</a>
-      <a href="about.html" class="text-sm text-gray-800 hover:underline">About Us</a>
-      <a href="#" class="text-sm text-gray-800 hover:underline">Contact</a>
-    </nav>
+  <header class="bg-[#fff9e3] p-6">
+    <div class="flex justify-between items-center max-w-7xl mx-auto">
+      <img src="/images/logo.png" alt="Logo Bongles" class="h-10" />
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="mobile-menu"
+        class="hidden absolute top-20 left-0 w-full bg-[#fff9e3] px-6 py-4 md:static md:flex md:items-center md:space-x-6 md:bg-transparent md:p-0">
+        <a href="#home" class="block py-2 text-sm text-gray-800 hover:underline">Home</a>
+        <a href="#produk" class="block py-2 text-sm text-gray-800 hover:underline">Products</a>
+        <a href="about.html" class="block py-2 text-sm text-gray-800 hover:underline">About Us</a>
+        <a href="#" class="block py-2 text-sm text-gray-800 hover:underline">Contact</a>
+      </nav>
+    </div>
   </header>
+
 
   <!-- Hero -->
   <section id="home" class="text-center bg-gradient-to-b from-[#FFF9E3] to-white py-12">
@@ -172,6 +179,13 @@
   <script>
     const API_URL = 'https://script.google.com/macros/s/AKfycbwxZd4iU88ZPYsFueHnmqF4jWZColUXjZUMJ_rLc_sMzdMFv_2aSiPs9WReFAUGITUW/exec?table=produks';
     const tpl = document.getElementById('product-template');
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
     async function loadProducts() {
       try {
