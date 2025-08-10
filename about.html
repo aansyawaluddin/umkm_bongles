@@ -6,7 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us – Bongles UMKM</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/images/logo.png" type="image/png" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes scroll-horizontal {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll-horizontal 30s linear infinite;
+            width: max-content;
+        }
+    </style>
 </head>
 
 <body class="font-sans text-gray-900 antialiased">
@@ -16,6 +37,7 @@
         <nav class="space-x-6">
             <a href="index.html" class="text-sm text-gray-800 hover:underline">Home</a>
             <a href="about.html" class="text-sm text-gray-800 hover:underline">About Us</a>
+            <a href="contact.html" class="text-sm text-gray-800 hover:underline">Contact</a>
         </nav>
     </header>
 
@@ -62,37 +84,7 @@
         <!-- Foto di kiri -->
         <div class="md:w-1/2 flex justify-center">
             <div class="w-72 h-72">
-                <img src="/images/aan.png" alt="Aan" class="w-full h-full object-contain" />
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial 2 -->
-    <section class="relative overflow-hidden">
-        <div class=" bg-[#4C784A] py-20">
-            <div class=" max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center gap-8 text-white">
-                <!-- Kutipan & Nama -->
-                <div class="md:w-1/2 order-2 md:order-1 italic text-center md:text-left">
-                    <p class="text-lg leading-relaxed mb-4">
-                        "Kami sangat senang dengan adanya pendampingan dari mahasiswa KKN. Produk-produk UMKM desa kami
-                        jadi lebih dikenal, dan kami jadi lebih semangat untuk terus berkarya."
-                    </p>
-                    <p class="font-semibold text-sm">
-                        Bapak Saipul Jamil, Kepala Desa Bongki Lengkese
-                    </p>
-                </div>
-                <!-- Foto Bulat -->
-                <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
-                    <div class="relative">
-                        <div
-                            class="w-64 h-64 rounded-full overflow-hidden bg-yellow-400 flex items-center justify-center">
-                            <img src="/images/testimoni-pakdesa.png" alt="Pak Desa"
-                                class="w-56 h-56 object-cover rounded-full" />
-                        </div>
-                        <!-- Logo KKN di pojok kanan atas lingkaran -->
-                        <img src="/images/logo-kkn.png" alt="Logo KKN" class="absolute top-0 right-0 w-12 md:w-14" />
-                    </div>
-                </div>
+                <img src="/images/pakde.png" alt="Aan" class="w-full h-full object-contain" />
             </div>
         </div>
     </section>
